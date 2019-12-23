@@ -1,4 +1,4 @@
-{% set version = '2.2-7' %}
+{% set version = '2.2-9' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,26 +7,24 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: cmprsk_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/cmprsk_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cmprsk/cmprsk_{{ version }}.tar.gz
-  sha256: 952da4a0fd55a039f64f619c2c7cc29ba2490985ca67d2853de511692f1fb9c6
+  sha256: 295917ad78d3572905bf90dc1c70d17895f79c9aff9ddbd59c3a45b2ca730f76
 
 build:
   merge_build_host: True  # [win]
-  number: 1004
-  skip: true  # [win32]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('fortran') }}  # [not win]
+    - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('m2w64_fortran') }}        # [win]
+    - {{ compiler('fortran') }}        # [not win]
+    - {{ compiler('m2w64_fortran') }}  # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
@@ -46,22 +44,32 @@ test:
     - "\"%R%\" -e \"library('cmprsk')\""  # [win]
 
 about:
-  home: http://www.r-project.org
-  license: GPL (>= 2)
+  home: https://www.R-project.org
+  license: GPL-2
   summary: Estimation, testing and regression modeling of subdistribution functions in competing
     risks, as described in Gray (1988), A class of K-sample tests for comparing the
-    cumulative incidence of a competing risk, Ann. Stat. 16:1141-1154, and Fine JP and
-    Gray RJ (1999), A proportional hazards model for the subdistribution of a competing
-    risk, JASA, 94:496-509.
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    cumulative incidence of a competing risk, Ann. Stat. 16:1141-1154 <DOI:10.1214/aos/1176350951>,
+    and Fine JP and Gray RJ (1999), A proportional hazards model for the subdistribution
+    of a competing risk, JASA, 94:496-509, <DOI:10.1080/01621459.1999.10474144>.
+  license_family: GPL2
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+
+# Package: cmprsk
+# Version: 2.2-9
+# Date: 2019-10-01
+# Title: Subdistribution Analysis of Competing Risks
+# Author: Bob Gray <gray@jimmy.harvard.edu>
+# Maintainer: Bob Gray <gray@jimmy.harvard.edu>
+# Depends: R (>= 3.0.0), survival
+# Description: Estimation, testing and regression modeling of subdistribution functions in competing risks, as described in Gray (1988), A class of K-sample tests for comparing the cumulative incidence of a competing risk, Ann. Stat. 16:1141-1154 <DOI:10.1214/aos/1176350951>, and Fine JP and Gray RJ (1999), A proportional hazards model for the subdistribution of a competing risk, JASA, 94:496-509, <DOI:10.1080/01621459.1999.10474144>.
+# License: GPL (>= 2)
+# URL: https://www.R-project.org
+# NeedsCompilation: yes
+# Packaged: 2019-09-30 16:09:15 UTC; gray
+# Repository: CRAN
+# Date/Publication: 2019-10-09 14:10:08 UTC
