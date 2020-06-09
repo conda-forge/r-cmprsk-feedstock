@@ -1,4 +1,4 @@
-{% set version = '2.2-9' %}
+{% set version = "2.2-10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/cmprsk_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cmprsk/cmprsk_{{ version }}.tar.gz
-  sha256: 295917ad78d3572905bf90dc1c70d17895f79c9aff9ddbd59c3a45b2ca730f76
+  sha256: e82db7b5ad0543a68ee1df3f79929ce6cdd91a2bfc0bae7bbe88146ed517ddf6
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,14 +46,11 @@ test:
 about:
   home: https://www.R-project.org
   license: GPL-2
-  summary: Estimation, testing and regression modeling of subdistribution functions in competing
-    risks, as described in Gray (1988), A class of K-sample tests for comparing the
-    cumulative incidence of a competing risk, Ann. Stat. 16:1141-1154 <DOI:10.1214/aos/1176350951>,
-    and Fine JP and Gray RJ (1999), A proportional hazards model for the subdistribution
-    of a competing risk, JASA, 94:496-509, <DOI:10.1080/01621459.1999.10474144>.
+  summary: Estimation, testing and regression modeling of subdistribution functions in competing risks, as described in Gray (1988), A class of K-sample tests for comparing the cumulative incidence of a competing risk, Ann. Stat. 16:1141-1154 <DOI:10.1214/aos/1176350951>, and Fine JP and Gray RJ (1999), A proportional hazards
+    model for the subdistribution of a competing risk, JASA, 94:496-509, <DOI:10.1080/01621459.1999.10474144>.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
