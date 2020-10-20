@@ -3,13 +3,11 @@ About r-cmprsk
 
 Home: https://www.R-project.org
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-cmprsk-feedstock/blob/master/LICENSE.txt)
 
 Summary: Estimation, testing and regression modeling of subdistribution functions in competing risks, as described in Gray (1988), A class of K-sample tests for comparing the cumulative incidence of a competing risk, Ann. Stat. 16:1141-1154 <DOI:10.1214/aos/1176350951>, and Fine JP and Gray RJ (1999), A proportional hazards model for the subdistribution of a competing risk, JASA, 94:496-509, <DOI:10.1080/01621459.1999.10474144>.
-
-
 
 Current build status
 ====================
@@ -29,57 +27,79 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_r_base3.6target_platformlinux-64</td>
+              <td>linux_64_c_compiler_version7fortran_compiler_version7r_base3.6target_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=linux&configuration=linux_r_base3.6target_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7fortran_compiler_version7r_base3.6target_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_r_base4.0target_platformlinux-64</td>
+              <td>linux_64_c_compiler_version7fortran_compiler_version7r_base4.0target_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=linux&configuration=linux_r_base4.0target_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7fortran_compiler_version7r_base4.0target_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_r_base3.6target_platformosx-64</td>
+              <td>linux_64_c_compiler_version9fortran_compiler_version9r_base3.6target_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=osx&configuration=osx_r_base3.6target_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version9fortran_compiler_version9r_base3.6target_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_r_base4.0target_platformosx-64</td>
+              <td>linux_64_c_compiler_version9fortran_compiler_version9r_base4.0target_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=osx&configuration=osx_r_base4.0target_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version9fortran_compiler_version9r_base4.0target_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_r_base3.6target_platformwin-64</td>
+              <td>osx_64_fortran_compiler_version7r_base3.6target_platformosx-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=win&configuration=win_r_base3.6target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=osx&configuration=osx_64_fortran_compiler_version7r_base3.6target_platformosx-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_r_base4.0target_platformwin-64</td>
+              <td>osx_64_fortran_compiler_version7r_base4.0target_platformosx-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=win&configuration=win_r_base4.0target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=osx&configuration=osx_64_fortran_compiler_version7r_base4.0target_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_fortran_compiler_version9r_base3.6target_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=osx&configuration=osx_64_fortran_compiler_version9r_base3.6target_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_fortran_compiler_version9r_base4.0target_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=osx&configuration=osx_64_fortran_compiler_version9r_base4.0target_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_r_base3.6target_platformwin-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=win&configuration=win_64_r_base3.6target_platformwin-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_r_base4.0target_platformwin-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1039&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-cmprsk-feedstock?branchName=master&jobName=win&configuration=win_64_r_base4.0target_platformwin-64" alt="variant">
                 </a>
               </td>
             </tr>
           </tbody>
         </table>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
     </td>
   </tr>
 </table>
