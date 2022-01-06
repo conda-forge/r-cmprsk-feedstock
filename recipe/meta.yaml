@@ -1,4 +1,4 @@
-{% set version = "2.2-10" %}
+{% set version = "2.2-11" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/cmprsk_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/cmprsk/cmprsk_{{ version }}.tar.gz
-  sha256: e82db7b5ad0543a68ee1df3f79929ce6cdd91a2bfc0bae7bbe88146ed517ddf6
+  sha256: 844027cb2c162cf7ef97034d01237ad7b81aa192fe302250d22d2c5528110e14
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
