@@ -1,6 +1,5 @@
 {% set version = "2.2-12" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-cmprsk
@@ -13,8 +12,7 @@ source:
   sha256: 773ecb93be0eac7bb5dfe9ea1480380da89ea95497b7b2febb08fd7c5104acdc
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,7 +35,6 @@ requirements:
     - r-survival
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-survival
 
 test:
